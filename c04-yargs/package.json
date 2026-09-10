@@ -1,0 +1,26 @@
+{
+  "name": "c04-yargs",
+  "version": "1.0.0",
+  "description": "Capítulo 4: CLI con Yargs y TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "cli": "tsx src/index.ts"
+  },
+  "keywords": ["node", "typescript", "tsx", "yargs", "cli"],
+  "dependencies": {
+    "yargs": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "@types/yargs": "^17.0.35",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
