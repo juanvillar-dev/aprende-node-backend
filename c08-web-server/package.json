@@ -1,0 +1,30 @@
+{
+  "name": "c08-web-server",
+  "version": "1.0.0",
+  "description": "Capítulo 8: Servidor web nativo de Node.js con TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "tsx",
+    "http",
+    "web-server"
+  ],
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  },
+  "dependencies": {
+    "env-var": "^7.5.0"
+  }
+}

@@ -1,0 +1,32 @@
+# Docker Compose para MySQL 8.4 usado en c06 y c07.
+#
+# Los valores ${...} se interpolan automáticamente desde el archivo .env
+# que vive en esta misma carpeta (docker compose lo lee por defecto).
+#
+# OJO: DB_HOST de la app fuera del contenedor es "localhost" (mapeo de
+# puertos). El nombre "db" es el alias interno de la red de Docker, NO
+# se usa desde tu máquina.
+
+services:
+  db:
+    image: mysql:8.4
+    container_name: c06-mysql
+    restart: unless-stopped
+    ports:
+      - "${DB_PORT}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping --silent -h localhost -u root -p\"$$MYSQL_ROOT_PASSWORD\""]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  mysql_data:
