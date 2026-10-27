@@ -1,0 +1,28 @@
+@baseUrl = http://localhost:3000
+
+### Registrar usuario
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "nombre": "Henry",
+  "email": "henry.test@example.com",
+  "password": "123456"
+}
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "henry.test@example.com",
+  "password": "123456"
+}
+
+### Validar email
+POST {{baseUrl}}/auth/validar-email
+Content-Type: application/json
+
+{
+  "token": "abc123"
+}
