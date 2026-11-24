@@ -1,0 +1,40 @@
+{
+  "name": "c12-autenticacion-v2",
+  "version": "1.0.0",
+  "description": "Capítulo 12: API con express aplicando autenticacion",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "express",
+    "arquitectura",
+    "web-server",
+    "auntentication",
+    "security"
+  ],
+  "author": "Juan Villar",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "env-var": "^7.5.0",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.12.1",
+    "nodemailer": "^10.5.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
